@@ -10,7 +10,7 @@ export const ListItem = ({item, index, toggleComplete, remove}) => {
             type="checkbox" 
             checked={item.complete} 
             onChange={() => toggleComplete(item.id)}
-            className={`complete`}
+            className={`complete--${item.id}`}
           />
           <button 
             onClick={() => remove(item.id)}

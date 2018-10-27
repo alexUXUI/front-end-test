@@ -48,7 +48,7 @@ class List extends Component {
     }
   }
 
-  remove(id) {
+  remove = (id) => {
     let newState = Object.assign({}, this.state)
     newState.list[id] = undefined
     return this.setState(newState)
