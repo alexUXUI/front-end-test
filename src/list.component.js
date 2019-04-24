@@ -8,9 +8,9 @@ class List extends Component {
 
   constructor() {
     super()
-    this.state = { 
+    this.state = {
       list: { ...LIST },
-      inputField: '' 
+      inputField: ''
     }
 
     this.toggleComplete = this.toggleComplete.bind(this)
@@ -48,7 +48,7 @@ class List extends Component {
     }
   }
 
-  remove(id) {
+  remove=(id)=> {
     let newState = Object.assign({}, this.state)
     newState.list[id] = undefined
     return this.setState(newState)
@@ -57,9 +57,9 @@ class List extends Component {
   render() {
     return (
       <div className="App">
-        <AddItem 
-          addItem={this.addItem} 
-          state={this.state} 
+        <AddItem
+          addItem={this.addItem}
+          state={this.state}
           updateInputField={this.updateInputField}
           inputField={this.state.inputField}
         />
@@ -67,9 +67,9 @@ class List extends Component {
           {
             Object.values(this.state.list).map((item, index) => {
               return (
-                <ListItem 
-                  index={index} 
-                  item={item} 
+                <ListItem
+                  index={index}
+                  item={item}
                   toggleComplete={this.toggleComplete}
                   remove={this.remove}
                   key={index}
