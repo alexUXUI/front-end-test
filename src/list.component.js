@@ -13,7 +13,7 @@ class List extends Component {
       inputField: ''
     }
 
-    this.toggleComplete = this.toggleComplete.bind(this)
+    // this.toggleComplete = this.toggleComplete.bind(this)
     this.addItem = this.addItem.bind(this)
     this.updateInputField = this.updateInputField.bind(this)
   }

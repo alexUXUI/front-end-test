@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() })
 
 describe('List test suite:', () => {
 
-  let LIST 
+  let LIST
   let ID = 1
 
   beforeEach(() => LIST = mount(<List />))
@@ -31,6 +31,7 @@ describe('List test suite:', () => {
 
   it('Clicking on a complete button sets an items state to complete', () => {
     const checkbox = () => LIST.find(`.complete--${ID}`);
+    
     checkbox().simulate('change', { target: { checked: true }});
     expect(LIST.state().list[ID].complete).toBe(true)
   })
