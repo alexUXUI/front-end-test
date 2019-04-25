@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ListItem } from './item.component'
 import { AddItem } from './addItem.component';
 import { LIST } from './constants'
+import DataTable from './DataTable';
 import './list.styles.css'
 
 class List extends Component {
@@ -10,10 +11,15 @@ class List extends Component {
     super()
     this.state = {
       list: { ...LIST },
-      inputField: ''
+      inputField: '',
+
+      data:[
+       { header:'Header', name: 'Name', email: 'Email'},
+       { header:'Header', name: 'Name', email: 'Email'},
+      ]
     }
 
-    // this.toggleComplete = this.toggleComplete.bind(this)
+
     this.addItem = this.addItem.bind(this)
     this.updateInputField = this.updateInputField.bind(this)
   }
@@ -79,6 +85,10 @@ class List extends Component {
             })
           }
         </ul>
+
+        <DataTable
+        data = {this.state.data}
+        />
       </div>
     )
   }
