@@ -4,14 +4,17 @@ import Table from './Table';
 export default class DataTable extends React.Component {
   render(){
     return (
-      <div>
+    <table>
+      <thead>
+        <tr>
         {this.props.data.map(col=>
           <Table
             key = {col.id}
           />
         )}
-      </div>
-
+        </tr>
+      </thead>
+    </table>
     )
   }
 }
