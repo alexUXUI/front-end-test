@@ -14,15 +14,15 @@ class List extends Component {
       inputField: '',
 
       data: [
-            { id: 1, name: 'Mediocre Iron Watch', product:'one'},
-            { id: 2, name: 'Heavy Duty Concrete Plate', product:'two'},
-            { id: 3, name: 'Intelligent Paper Knife', product:'three'},
-            { id: 4, name: 'Small Aluminum Keyboard', product:'four'},
-            { id: 5, name: 'Practical Copper Plate', product:'five'},
-            { id: 6, name: 'Awesome Bronze Pants', product:'six'},
-            { id: 7, name: 'Intelligent Leather Clock', product:'seven'},
-            { id: 8, name: 'Ergonomic Bronze Lamp', product:'eight'},
-            { id: 9, name: 'Awesome Leather Shoes', product:'nine'},
+            { id: 1, name: 'clean house', priority:'one'},
+            { id: 2, name: 'meditate', priority:'two'},
+            { id: 3, name: 'laundry', priority:'three'},
+            { id: 4, name: 'grocery store', priority:'four'},
+            { id: 5, name: 'food prep', priority:'five'},
+            { id: 6, name: 'study', priority:'six'},
+            { id: 7, name: 'read', priority:'seven'},
+            { id: 8, name: 'sunshine', priority:'eight'},
+            { id: 9, name: 'trail', priority:'nine'},
           ]
     }
 

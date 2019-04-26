@@ -22,9 +22,8 @@ export default class DataTable extends React.Component {
    return (
     <tbody style={style}>
       <tr>
-        <th style={style}>{this.props.data.product}</th>
+        <th style={style}>{this.props.data.priority}</th>
         <td style={tdstyle}>{this.props.data.name}</td>
-        <td>{this.props.data.price}</td>
       </tr>
     </tbody>
    )
