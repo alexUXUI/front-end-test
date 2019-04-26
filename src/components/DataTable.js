@@ -10,11 +10,18 @@ export default class DataTable extends React.Component {
        textAlign:'left',
    }
 
+   const tdstyle= {
+       border: '.5px solid black',
+       borderCollapse: 'collapse',
+       textAlign:'left',
+   }
+
+
    return (
     <tbody style={style}>
       <tr style={style}>
         <th style={style}>{this.props.data.product}</th>
-        <td>{this.props.data.name}</td>
+        <td style={tdstyle}>{this.props.data.name}</td>
         <td>{this.props.data.price}</td>
       </tr>
     </tbody>
