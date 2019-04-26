@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ListItem } from './item.component'
 import { AddItem } from './addItem.component';
 import { LIST } from './constants'
-import DataTable from './DataTable';
+import Table from './components/Table.js';
 import './list.styles.css'
 
 class List extends Component {
@@ -13,16 +13,24 @@ class List extends Component {
       list: { ...LIST },
       inputField: '',
 
-      data:[
-       { header:'Header', name: 'Name', email: 'Email'},
-       { header:'Header', name: 'Name', email: 'Email'},
-      ]
+      data: [
+            { id: 1, name: 'Mediocre Iron Watch', product:'one'},
+            { id: 2, name: 'Heavy Duty Concrete Plate', product:'two'},
+            { id: 3, name: 'Intelligent Paper Knife', product:'three'},
+            { id: 4, name: 'Small Aluminum Keyboard', product:'four'},
+            { id: 5, name: 'Practical Copper Plate', product:'five'},
+            { id: 6, name: 'Awesome Bronze Pants', product:'six'},
+            { id: 7, name: 'Intelligent Leather Clock', product:'seven'},
+            { id: 8, name: 'Ergonomic Bronze Lamp', product:'eight'},
+            { id: 9, name: 'Awesome Leather Shoes', product:'nine'},
+          ]
     }
-
 
     this.addItem = this.addItem.bind(this)
     this.updateInputField = this.updateInputField.bind(this)
   }
+
+
 
   updateInputField(text) {
     return this.setState({
@@ -85,9 +93,8 @@ class List extends Component {
             })
           }
         </ul>
-
-        <DataTable
-        data = {this.state.data}
+        <Table
+          data = {this.state.data}
         />
       </div>
     )
